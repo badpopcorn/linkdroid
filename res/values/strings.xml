@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Copyright 2009 BadPopcorn, Inc.
+  
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+  
+       http://www.apache.org/licenses/LICENSE-2.0
+  
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<resources>
+  <string name="app_name">LinkDroid</string>
+
+  <string name="about_name">About LinkDroid</string>
+  <string name="about_text">Webhooks (webhooks.org) are user defined
+    callback URIs that receive HTTP Posts in response to user actions or
+    system events. For example, LinkDroid (linkdroid.org) can post
+    media, such as images, to defined Webhooks when users selects the
+    "Share With" option. LinkDroid can also post broadcasted events (by
+    Android, or other programs) to a target Webhook (via a background
+    service) as specified by registered IntentFilters. 
+  </string>
+  <string name="about_intent_filters_name">About IntentFilters</string>
+  <string name="about_intent_filters_text">IntentFilters tell the underlying
+    Android OS which broadcasted events (Intents) what LinkDroid is
+    interested in receiving. See Android documentation for technical
+    details about Intents and IntentFilters. You can enable LinkDroid to
+    post to a specified Webhook in response to Intents by defining
+    IntentFilters and by enabling the broadcast receiver in the
+    application settings.
+  </string>
+
+  <string name="broadcastreceiverservice_received_intent_prefix">Received Broadcast:</string>
+  <string name="broadcastreceiverservice_create">Creating BroadcastReceiverService
+  </string>
+  <string name="broadcastreceiverservice_start">Starting BroadcastReceiverService
+  </string>
+  <string name="broadcastreceiverservice_stop">Stopping BroadcastReceiverService
+  </string>
+
+  <string name="intentfilter_edit_name">Edit IntentFilter</string>
+  <string name="intentfilter_edit_action_label">Action</string>
+  <string name="intentfilter_edit_category_label">Category</string>
+  <string name="intentfilter_edit_data_auth_host_label">Data Authority Host</string>
+  <string name="intentfilter_edit_data_auth_port_label">Data Authority Port</string>
+  <string name="intentfilter_edit_data_scheme_label">Data Scheme</string>
+  <string name="intentfilter_edit_data_type_label">Data Type</string>
+  <string name="intentfilter_edit_menu_save_label">Save</string>
+  <string name="intentfilter_edit_menu_cancel_label">Cancel</string>
+
+  <string name="intentfilter_import_cancelled">Import Cancelled</string>
+  <string name="intentfilter_import_saved">Import Saved</string>
+  <string name="intentfilter_import_json_error">Invalid JSON IntentFilter File</string>
+  <string name="intentfilter_import_io_error">IO Error on IntentFilter File</string>
+
+  <string name="intentfilters_list_name">IntentFilters</string>
+  <string name="intentfilters_list_empty_view">No IntentFilters defined.</string>
+  <string name="intentfilters_list_menu_new_label">New IntentFilter</string>
+  <string name="intentfilters_list_menu_event_webhook_label">Receiver Webhook</string>
+  <string name="intentfilters_list_menu_about_label">About IntentFilters</string>
+  <string name="intentfilters_list_context_menu_edit_label">Edit IntentFilter</string>
+  <string name="intentfilters_list_context_menu_delete_label">Delete IntentFilter</string>
+  <string name="intentfilters_list_dialog_delete_title">Confirm Delete?</string>
+  <string name="intentfilters_list_dialog_delete_message">Really delete this Intentfilter?</string>
+
+  <string name="misc_yes_button">Yes</string>
+  <string name="misc_no_button">No</string>
+  <string name="misc_ok_button">Ok</string>
+  <string name="misc_send_button">Send</string>
+  <string name="misc_cancel_button">Cancel</string>
+  <string name="misc_canceled">Canceled</string>
+  <string name="misc_saved">Saved</string>
+  <string name="misc_failed_save">Failed to Saved</string>
+  <string name="notification_title">LinkDroid</string>
+
+  <string name="logs_list_name">LinkDroid Logs</string>
+  <string name="logs_list_empty_view">Log is Empty</string>
+  <string name="logs_list_menu_clear_label">Clear Log</string>
+
+  <string name="smsreceiver_error_prefix">SmsReceiver Error:</string>
+  <string name="smsreceiver_received_intent">Sms Received</string>
+
+  <string name="webhooks_list_empty_view">No Webhooks defined. Add a new Webhook through
+    the menu options.</string>
+  <string name="webhooks_list_sent_toast">Queued to send</string>
+  <string name="webhooks_list_error_dialog_title">Error</string>
+  <string name="webhooks_list_error_dialog_undefined">Undefined Error</string>
+  <string name="webhooks_list_progress_dialog_sending_title">Sending...</string>
+  <string name="webhooks_list_progress_dialog_sending_body">Posting data to Webhook</string>
+  <string name="webhooks_list_menu_new_label">New Webhook</string>
+  <string name="webhooks_list_menu_view_log_label">View Log</string>
+  <string name="webhooks_list_menu_settings_label">Settings</string>
+  <string name="webhooks_list_menu_about_label">About</string>
+  <string name="webhooks_list_menu_intentfilters_label">IntentFilters</string>
+  <string name="webhooks_list_context_menu_send_label">Post to Webhook</string>
+  <string name="webhooks_list_context_menu_send_extra_label">Post with Extra Data</string>
+  <string name="webhooks_list_context_menu_edit_label">Edit Webhook</string>
+  <string name="webhooks_list_context_menu_delete_label">Delete Webhook</string>
+  <string name="webhooks_list_context_menu_set_events_webhook_label">Set as Receiver Webhook</string>
+  <string name="webhooks_list_dialog_delete_title">Confirm Delete?</string>
+  <string name="webhooks_list_dialog_delete_message">Really delete this Webhook?</string>
+  <string name="webhooks_list_dialog_send_extra_title">Send with Extra Data</string>
+  <string name="webhooks_list_dialog_send_extra_message">Input to be sent with post</string>
+
+  <string name="webhook_edit_activity_name">Webhook Edit</string>
+  <string name="webhook_edit_name_label">Webhook Name</string>
+  <string name="webhook_edit_uri_label">Webhook Post Uri</string>
+  <string name="webhook_edit_secret_label">HMAC Secret Key</string>
+  <string name="webhook_edit_nonce_random_label">Enable HMAC Random Nonce</string>
+  <string name="webhook_edit_nonce_timestamp_label">Enable HMAC Timestamp Nonce</string>
+  <string name="webhook_edit_menu_save_label">Save</string>
+  <string name="webhook_edit_menu_cancel_label">Cancel</string>
+
+  <string name="webhook_import_cancelled">Import Cancelled</string>
+  <string name="webhook_import_saved">Import Saved</string>
+  <string name="webhook_import_json_error">Invalid JSON Webhook File</string>
+  <string name="webhook_import_json_nonce_random_error">JSON Error with NONCE Random Field</string>
+  <string name="webhook_import_json_nonce_timestamp_error">JSON Error with NONCE Timestamp Field</string>
+  <string name="webhook_import_io_error">IO Error on Webhook File</string>
+
+  <string name="webhook_post_service_log_completed_post_prefix">Completed:</string>
+  <string name="webhook_post_service_creating">Starting Webhook backend thread</string>
+  <string name="webhook_post_service_starting_webhook_post_prefix">Posting:</string>
+  <string name="webhook_post_service_shutting_down">Shutting down Webhook backend thread
+  </string>
+  <string name="postjob_http_error">Http Error</string>
+
+  <string name="settings_name">LinkDroid Settings</string>
+  <string name="settings_notification_category_title">Notification settings</string>
+  <string name="settings_notification_title">Enable notifications</string>
+  <string name="settings_notification_summary">Notify in status bar when LinkDroid logs a
+    message</string>
+  <string name="settings_notification_log_level_title">Notify log level</string>
+  <string name="settings_notification_log_level_summary">Only notify when log message level is higher
+    than this setting</string>
+  <string name="settings_notification_log_level_default">1</string>
+  <string name="settings_notification_sound_title">Select Ringtone</string>
+  <string name="settings_notification_sound_default">content://settings/system/notification_sound
+  </string>
+  <string name="settings_notification_vibrate_title">Vibrate</string>
+  <string name="settings_notification_vibrate_summary">Also vibrate on notification</string>
+  <string name="settings_events_category_title">Broadcast Receiver settings</string>
+  <string name="settings_events_enabled_title">Enable Service</string>
+  <string name="settings_events_enabled_summary">Register IntentFilters and post received
+    Intents to Webhook
+  </string>
+  <string name="settings_events_sms_enabled_title">Listen for incoming SMS</string>
+  <string name="settings_events_sms_enabled_summary">Post SMS messages to Webhook if service is
+    enabled.
+  </string>
+  <string name="settings_events_log_level_title">Events Log Level</string>
+  <string name="settings_events_log_level_summary">Log messages related to received Intents are
+    set to this level
+  </string>
+  <string name="settings_events_dialog_log_level_title">Events Log Level</string>
+  <string name="settings_events_dialog_log_level_default">-1</string>
+  <string name="settings_system_category_title">System settings</string>
+  <string name="settings_system_logging_verbose_title">Verbose Logging</string>
+  <string name="settings_system_logging_verbose_summary">Enable LinkDroid debug logging</string>
+</resources>

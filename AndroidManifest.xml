@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Copyright 2009 BadPopcorn, Inc.
+  
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+  
+       http://www.apache.org/licenses/LICENSE-2.0
+  
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="org.linkdroid" android:versionCode="1" android:versionName="0.9.13">
+
+  <uses-sdk android:minSdkVersion="2" />
+
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+  <uses-permission android:name="android.permission.RECEIVE_SMS" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+
+  <application android:icon="@drawable/icon" android:label="@string/app_name">
+    <service android:name=".BroadcastReceiverService" />
+    <service android:name=".LogsService" />
+    <service android:name=".WebhookPostService" />
+
+    <provider android:name=".IntentFilterProvider"
+      android:authorities="org.linkdroid.intentfilters" />
+    <provider android:name=".LogsProvider" android:authorities="org.linkdroid.logs" />
+    <provider android:name=".WebhooksProvider"
+      android:authorities="org.linkdroid.webhooks" />
+
+    <receiver android:name=".BootEventReceiver">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED" />
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </receiver>
+
+    <activity android:name=".IntentFiltersListActivity"
+      android:label="@string/intentfilters_list_name" />
+    <activity android:name=".IntentFilterEditActivity"
+      android:label="@string/intentfilter_edit_name" />
+
+    <activity android:name=".IntentFilterImportActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:mimeType="application/vnd.linkdroid.intentfilter" />
+      </intent-filter>
+    </activity>
+
+
+    <activity android:name=".WebhooksListActivity"
+      android:label="@string/app_name">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.SEND"></action>
+        <category android:name="android.intent.category.DEFAULT"></category>
+        <data android:mimeType="*/*"></data>
+      </intent-filter>
+    </activity>
+
+    <activity android:name=".WebhookEditActivity"
+      android:label="@string/webhook_edit_activity_name" />
+
+    <activity android:name=".WebhookImportActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:mimeType="application/vnd.linkdroid.webhook" />
+      </intent-filter>
+    </activity>
+
+    <activity android:name=".LogsListActivity" android:label="@string/logs_list_name" />
+
+    <activity android:name=".Settings" android:label="@string/settings_name" />
+
+    <activity android:name=".About" android:label="@string/about_name"
+      android:theme="@android:style/Theme.Dialog" />
+    <activity android:name=".AboutIntentFilters" android:label="@string/about_intent_filters_name"
+      android:theme="@android:style/Theme.Dialog" />
+  </application>
+</manifest> 
